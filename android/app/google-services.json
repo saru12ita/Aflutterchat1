@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "166433443473",
+    "project_id": "wechatapp-7c0e7",
+    "storage_bucket": "wechatapp-7c0e7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:166433443473:android:1484c26cba7c285e11b930",
+        "android_client_info": {
+          "package_name": "com.dexkorchatapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOoaAFgJFM61w1KTANyUFJbOBX00nGmPI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

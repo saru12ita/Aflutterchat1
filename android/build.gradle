@@ -1,0 +1,54 @@
+/*
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+ 
+rootProject.buildDir = "../build"
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(":app")
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
+*/
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.buildDir = "../build"
+
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+
+subprojects {
+    project.evaluationDependsOn(":app")
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
+
+// Adding defaultConfig section for applicationId
+subprojects {
+    afterEvaluate { project ->
+        if (project.hasProperty("android")) {
+            android {
+                defaultConfig {
+                    applicationId "com.dexkorchatapp" // Use your desired application ID
+                    // Add other defaultConfig parameters if needed
+                }
+            }
+        }
+    }
+}
